@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      About Arianna "Ari" Kelley-Lomax | Writing, Editing & Communication
+    </title>
+    <meta
+      name="description"
+      content="Learn more about Arianna 'Ari' Kelley-Lomax — multidisciplinary professional specializing in writing, editing, and communication."
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../img/thumb/thumb-resume.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-row">
+        <a class="brand" href="../index.html" aria-label="Go to homepage">
+          <span class="brand-name">Arianna "Ari" Kelley-Lomax</span>
+          <span class="brand-tag">Writing • Editing • Communication</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-controls="menu" aria-expanded="false">
+            Menu
+          </button>
+          <ul id="menu" class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html" aria-current="page">About</a></li>
+            <li><a href="../resume/resume.html">Resume</a></li>
+            <li><a href="../projects/projects.html">Projects</a></li>
+            <li><a href="../coding/coding.html">Coding</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="about-hero section" aria-labelledby="about-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="panel panel--dark">
+              <h1 id="about-hero-title">About Ari</h1>
+              <p class="tagline">
+                I’m a multidisciplinary professional who bridges creativity with
+                strategy. My work spans writing, editing, and communication —
+                helping individuals, teams, and brands tell their stories with
+                clarity and impact.
+              </p>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-outline" href="../projects/projects.html"
+                >See My Work!</a
+              >
+              <a class="btn btn-outline" href="../resume/resume.html"
+                >View My Resume!</a
+              >
+            </div>
+          </div>
+          <figure class="hero-media">
+            <img
+              src="../img/ari-portrait.svg"
+              alt="Arianna holding her undergrad degree in her cap and grad stole"
+            />
+            <figcaption>
+              Based in Chicago, NYC, & Los Angeles — available remote.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="about section" aria-labelledby="about-title">
+        <div class="container">
+          <div class="panel panel--dark">
+            <h2 id="about-title">Background</h2>
+            <p>
+              With a BA in Communication Studies from Kent State University and
+              experience in editing, broadcast journalism, and content
+              development, I bring a versatile approach to creative work. I
+              specialize in transforming complex ideas into clear, engaging
+              messages and delivering polished, audience-focused writing and
+              edits.
+            </p>
+            <p>
+              I value clarity, voice, and organization — and I’m currently
+              expanding my skills in software engineering to complement my
+              editorial work and streamline creative workflows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="panel panel--dark">
+            <h2 id="skills-title">Core Skills</h2>
+            <ul class="skill-grid" role="list">
+              <li><h3>Writing & Editing</h3></li>
+              <li><h3>Content Development</h3></li>
+              <li><h3>Communication Strategy</h3></li>
+              <li><h3>Collaboration & Project Support</h3></li>
+              <li>
+                <h3>
+                  Software Familiarity: Microsoft Office, Oracle, Adobe Creative
+                  Suite (basic), Web Editing Tools
+                </h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="personal-touch section">
+        <div class="container">
+          <div class="panel panel--dark">
+            <h2>Beyond the Work</h2>
+            <p>
+              I’m passionate about storytelling, screenwriting, and building a
+              career at the intersection of creativity and business. When I’m
+              not editing or writing, I’m exploring film projects, building new
+              skills in software engineering, or managing projects that bring
+              ideas to life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="ethos-title">
+        <div class="container">
+          <h2 id="ethos-title">Creative Ethos</h2>
+          <figure class="quote-card">
+            <blockquote>
+              “A writer should be joyous, an optimist … a believer in the
+              perfectibility of man.”
+            </blockquote>
+            <figcaption>— John Cheever</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-row">
+        <small>© 2025 Arianna Kelley-Lomax. All rights reserved.</small>
+        <span id="quote-rotator" class="footer-quote" aria-live="polite"></span>
+        <a href="../privacy/privacy.html">Privacy</a>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("menu");
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          menu.classList.toggle("open");
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        const quotes = [
+          {
+            text: "Words are, in my not-so-humble opinion, our most inexhaustible source of magic.",
+            by: "J.K Rowling",
+          },
+          {
+            text: "A writer should be joyous, an optimist … a believer in the perfectibility of man.",
+            by: "John Cheever",
+          },
+        ];
+
+        const el = document.getElementById("quote-rotator");
+        if (!el) {
+          console.warn('No element with id="quote-rotator" found.');
+          return;
+        }
+
+        let i = 0;
+        function render() {
+          const q = quotes[i];
+
+          if (!q || !q.text) {
+            el.textContent = q && q.by ? "— " + q.by : "";
+          } else {
+            el.textContent = '"' + q.text + '" — ' + q.by;
+          }
+          i = (i + 1) % quotes.length;
+        }
+
+        render();
+        setInterval(render, 10000);
+
+        console.log("Quote rotator mounted:", {
+          foundElement: !!el,
+          quotesCount: quotes.length,
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -34,7 +34,7 @@ body {
   background-color: #faf3e0; /* cream fallback color */
   background: linear-gradient(rgba(15, 17, 22, 0.3), rgba(15, 17, 22, 0.3)),
     url("../img/writer-background.svg") no-repeat center center fixed;
-  background-size: 100% 100%; /* or try 100% 100% */
+  background-size: cover; /* or try 100% 100% */
 }
 
 @media (max-width: 768px) {

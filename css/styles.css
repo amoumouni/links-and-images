@@ -2,20 +2,29 @@
    0) Variables & Base
    ========================================= */
 :root {
-  --color-primary: #d4af37;      /* Gold (accent) */
-  --color-secondary: #1f4e79;    /* Deep blue (brand text) */
-  --color-accent: #0f1116;       /* Dark  (header & footer bg) */
-  --color-midnight: #0f1729;     /* Midnight Blue  (section boxes) */
+  --color-primary: #d4af37; /* Gold (accent) */
+  --color-secondary: #1f4e79; /* Deep blue (brand text) */
+  --color-accent: #0f1116; /* Dark  (header & footer bg) */
+  --color-midnight: #0f1729; /* Midnight Blue  (section boxes) */
 
-  --color-text-light: #ffffff;   /* White text */
-  --color-text-dark: #111111;    /* Dark text (rare) */
+  --color-text-light: #ffffff; /* White text */
+  --color-text-dark: #111111; /* Dark text (rare) */
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
 
 /* === Global page background (last wins) === */
-html, body { min-height: 100%; }
+html,
+body {
+  min-height: 100%;
+}
 
 body {
   font-family: "Source Serif Pro", serif;
@@ -23,49 +32,81 @@ body {
   color: var(--color-text-light);
 
   background-color: #faf3e0; /* cream fallback color */
-  background-image: 
-    linear-gradient(rgba(15,17,22,0.30), rgba(15,17,22,0.30)), /* dark wash for readability */
-    url("../img/writer-background.svg"); /* your image */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* you can remove if it causes blur */
+  background: linear-gradient(rgba(15, 17, 22, 0.3), rgba(15, 17, 22, 0.3)),
+    url("../img/writer-background.svg") no-repeat center center fixed;
+  background-size: cover; /* or try 100% 100% */
 }
 
-@media (max-width: 768px) { body { background-attachment: scroll; } }
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
 
-img { max-width: 100%; height: auto; display: block; }
-a  { color: var(--color-primary); text-decoration: none; }
-a:hover { text-decoration: underline; }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-.container { width: 90%; max-width: 1100px; margin: 0 auto; }
-.section   { padding: 3rem 0; }
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section {
+  padding: 3rem 0;
+}
 
 /* Accessibility: Skip link */
 .skip-link {
-  position: absolute; left: -9999px; top: auto; height: 1px; width: 1px; overflow: hidden;
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 .skip-link:focus {
-  position: static; background: #fff; color:#000; padding:.5rem .75rem; border-radius:6px;
+  position: static;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
 }
 
 /* =========================================
    1) Header & Navigation
    - BG black; brand text deep blue
    ========================================= */
-.site-header { background: var(--color-accent); color: var(--color-text-light); }
-.header-row  { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+.site-header {
+  background: var(--color-accent);
+  color: var(--color-text-light);
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
 
 /* Brand text in GOLD on black header */
-.brand-name { 
-  font-weight: 700; 
-  font-size: 1.125rem; 
+.brand-name {
+  font-weight: 700;
+  font-size: 1.125rem;
   color: var(--color-primary); /* gold */
 }
 
-.brand-tag  { 
-  display: block; 
-  font-size: .875rem; 
+.brand-tag {
+  display: block;
+  font-size: 0.875rem;
   color: var(--color-primary); /* gold */
   opacity: 1; /* make it fully bright instead of faded */
 }
@@ -74,14 +115,23 @@ a:hover { text-decoration: underline; }
 .brand-name:hover,
 .brand-tag:hover {
   color: #f5d76e; /* lighter gold on hover */
-  text-shadow: 0 0 6px rgba(212, 175, 55, 0.75), 
-               0 0 12px rgba(212, 175, 55, 0.5);
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.75),
+    0 0 12px rgba(212, 175, 55, 0.5);
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.site-nav .nav-list { list-style: none; display: flex; gap: 20px; }
-.site-nav a { color: #fff; font-weight: 600; }
-.site-nav a[aria-current="page"] { border-bottom: 2px solid var(--color-primary); }
+.site-nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.site-nav a {
+  color: #fff;
+  font-weight: 600;
+}
+.site-nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--color-primary);
+}
 
 /* Mobile nav toggle */
 .nav-toggle {
@@ -89,7 +139,7 @@ a:hover { text-decoration: underline; }
   background: transparent;
   color: #fff;
   border: 2px solid #ffffff33;
-  padding: .45rem .65rem;
+  padding: 0.45rem 0.65rem;
   border-radius: 6px;
 }
 
@@ -103,29 +153,40 @@ a:hover { text-decoration: underline; }
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 6px 12px rgba(0,0,0,.35);
-  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Links inside boxes: gold for pop */
-.section-box a { color: var(--color-primary); font-weight: 600; }
-.section-box a:hover { color: #fff; }
+.section-box a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.section-box a:hover {
+  color: #fff;
+}
 
 /* Optional darker variant (if you ever want it) */
-.section-box.midnight { background: var(--color-accent); }
+.section-box.midnight {
+  background: var(--color-accent);
+}
 
 /* =========================================
    3) Hero
    ========================================= */
 .hero-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 2rem; align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
 }
-.tagline { margin: .75rem 0 1.25rem; }
+.tagline {
+  margin: 0.75rem 0 1.25rem;
+}
 
 /* If your hero text sits in a box (requested) */
 .hero .section-box {
-  background: #0f1729; 
+  background: #0f1729;
   border-color: transparent;
 }
 
@@ -134,12 +195,12 @@ a:hover { text-decoration: underline; }
    ========================================= */
 .btn {
   display: inline-block;
-  padding: .7rem 1.1rem;
+  padding: 0.7rem 1.1rem;
   border-radius: 6px;
   background: var(--color-primary);
   color: var(--color-text-dark);
   font-weight: 600;
-  transition: background .2s ease, color .2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
   position: center;
 }
 .btn:hover {
@@ -166,40 +227,82 @@ a:hover { text-decoration: underline; }
 }
 .card {
   background: #0f1729; /* dark card to layer over section box */
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 18px rgba(0,0,0,.25);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
   color: #fff;
 }
-.card img   { width: 100%; height: auto; }
-.card-body  { padding: 1rem; }
-.card h3    { margin-bottom: .35rem; font-family: "Montserrat", sans-serif; }
-.card .more { display: inline-block; margin-top: .35rem; font-weight: 600; color: var(--color-primary); }
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card-body {
+  padding: 1rem;
+}
+.card h3 {
+  margin-bottom: 0.35rem;
+  font-family: "Montserrat", sans-serif;
+}
+.card .more {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
 
 /* =========================================
    6) Resume / About specifics
    ========================================= */
-.resume-item { margin: 1rem 0; }
-.resume-head { display: flex; justify-content: space-between; gap: 1rem; }
-.resume-head h3 { font-family: "Montserrat", sans-serif; font-weight: 700; }
-.resume-bullets { margin: .5rem 0 0 1rem; }
-.resume-bullets li { margin: .3rem 0; }
+.resume-item {
+  margin: 1rem 0;
+}
+.resume-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.resume-head h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.resume-bullets {
+  margin: 0.5rem 0 0 1rem;
+}
+.resume-bullets li {
+  margin: 0.3rem 0;
+}
 
-.skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.tag-list  { list-style: disc; margin-left: 1.25rem; }
-.tag-list li { margin: .25rem 0; }
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.tag-list {
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+.tag-list li {
+  margin: 0.25rem 0;
+}
 
 /* Quote cards (About/Resume ethos) */
 .quote-card {
-  margin: 1rem 0; padding: 1.25rem;
-  border: 1px solid rgba(255,255,255,.1);
+  margin: 1rem 0;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   background: #0f1729;
-  color:#fff;
+  color: #fff;
 }
-.quote-card blockquote { margin: 0 0 .75rem 0; font-size: 1.05rem; line-height: 1.6; }
-.quote-card figcaption { color: #ddd; }
+.quote-card blockquote {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.quote-card figcaption {
+  color: #ddd;
+}
 
 /* =========================================
    7) Footer (Black to match Header)
@@ -210,33 +313,67 @@ a:hover { text-decoration: underline; }
   text-align: center;
   padding: 1rem 0;
 }
-.footer-quote { display: block; margin-top: .4rem; font-style: italic; font-size: .9rem; }
+.footer-quote {
+  display: block;
+  margin-top: 0.4rem;
+  font-style: italic;
+  font-size: 0.9rem;
+}
 
 /* =========================================
    8) Responsive
    ========================================= */
 @media (max-width: 992px) {
-  .card-grid  { grid-template-columns: repeat(2, 1fr); }
-  .skill-grid { grid-template-columns: repeat(2, 1fr); }
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .header-row { flex-direction: column; gap: .75rem; text-align: center; }
-  .nav-toggle { display: inline-block; }
+  .header-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  .nav-toggle {
+    display: inline-block;
+  }
 
   /* Collapse nav by default on mobile; your JS toggles .open */
-  .site-nav .nav-list { display: none; flex-direction: column; gap: 10px; }
-  .site-nav .nav-list.open { display: flex; }
+  .site-nav .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .site-nav .nav-list.open {
+    display: flex;
+  }
 
-  .hero-grid  { grid-template-columns: 1fr; }
-  .resume-head{ flex-direction: column; align-items: flex-start; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .resume-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 1.5rem; }
-  .site-nav .nav-list { gap: 5px; }
-  .section { padding: 2.25rem 0; }
-  .card-grid { grid-template-columns: 1fr; }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .site-nav .nav-list {
+    gap: 5px;
+  }
+  .section {
+    padding: 2.25rem 0;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================
@@ -249,7 +386,7 @@ a:hover { text-decoration: underline; }
 }
 
 .panel {
-  background-color: #0f1729; 
+  background-color: #0f1729;
   padding: 10px !important;
 }
 
@@ -279,29 +416,80 @@ ul {
   object-fit: contain;
 }
 
-.rps-modal[aria-hidden="true"] { display: none; }
-.rps-modal { position: fixed; inset: 0; z-index: 9999; }
-.rps-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.6); backdrop-filter: blur(2px); }
-.rps-dialog {
-  position: relative; max-width: 520px; margin: 10vh auto 0;
-  background: #10192c; color:#fff; border:1px solid rgba(255,255,255,.12);
-  border-radius:14px; box-shadow:0 20px 60px rgba(0,0,0,.5); overflow:hidden;
-  transform: translateY(20px); opacity:0; transition: transform .35s ease, opacity .35s ease;
+.rps-modal[aria-hidden="true"] {
+  display: none;
 }
-.rps-modal.show .rps-dialog { transform: translateY(0); opacity:1; }
-.rps-content { padding: 1.25rem 1.25rem 1.5rem; text-align:center; }
-.rps-content .rps-controls { display:flex; justify-content:center; gap:.5rem; flex-wrap:wrap; }
-.rps-close { position:absolute; top:8px; right:10px; appearance:none; border:0; background:transparent; color:#fff; font-size:1.75rem; cursor:pointer; opacity:.9; }
-.rps-close:hover { opacity:1; }
-.body-lock { overflow:hidden; }
+.rps-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+.rps-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+.rps-dialog {
+  position: relative;
+  max-width: 520px;
+  margin: 10vh auto 0;
+  background: #10192c;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.rps-modal.show .rps-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+.rps-content {
+  padding: 1.25rem 1.25rem 1.5rem;
+  text-align: center;
+}
+.rps-content .rps-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.rps-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 1.75rem;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.rps-close:hover {
+  opacity: 1;
+}
+.body-lock {
+  overflow: hidden;
+}
 #rps-output {
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  padding: 0.75rem; margin: 1rem 0;
+  padding: 0.75rem;
+  margin: 1rem 0;
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.95rem; line-height: 1.5; text-align: left;
-  white-space: pre-line; max-height: 180px; overflow-y: auto; color: #f4f4f4;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+  white-space: pre-line;
+  max-height: 180px;
+  overflow-y: auto;
+  color: #f4f4f4;
 }
 
 /* === Hide the close X button for RPS game === */
@@ -310,7 +498,9 @@ ul {
 }
 
 /* Ensure anything with the HTML 'hidden' attribute stays hidden */
-[hidden] { display: none !important; }
+[hidden] {
+  display: none !important;
+}
 
 #toHomepage {
   margin-top: 1rem;

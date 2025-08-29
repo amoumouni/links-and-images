@@ -127,7 +127,10 @@
             <div class="card-body">
               <h3>CSS Exercises</h3>
               <p>Selectors, layout, responsive tweaks, and more.</p>
-              <a class="more" id="browseCssExercises" href="#css-exercises"
+              <a
+                class="more toggle-grid"
+                data-target="#css-exercises"
+                href="#css-exercises"
                 >Browse Exercises ↓</a
               >
             </div>
@@ -160,7 +163,7 @@
               />
               <div class="card-body">
                 <h3>CSS Exercise 2</h3>
-                <p>Class & ID selectors</p>
+                <p>Class &amp; ID selectors.</p>
                 <a class="card-link" href="css-exercises/exercise2.html"
                   ><span class="more">Live Demo →</span></a
                 >
@@ -188,7 +191,7 @@
               />
               <div class="card-body">
                 <h3>CSS Exercise 4</h3>
-                <p>Chaining selectors (multiple classes)</p>
+                <p>Chaining selectors (multiple classes).</p>
                 <a class="card-link" href="css-exercises/exercise4.html"
                   ><span class="more">Live Demo →</span></a
                 >
@@ -235,7 +238,10 @@
                 Small functions in vanilla JS. Click an exercise to view code
                 and run it with sample inputs.
               </p>
-              <a class="more" id="browseExercises" href="#js-exercises"
+              <a
+                class="more toggle-grid"
+                data-target="#js-exercises"
+                href="#js-exercises"
                 >Browse Exercises ↓</a
               >
             </div>
@@ -247,7 +253,6 @@
             id="js-exercises"
             style="display: none"
           >
-            <!-- Function 1 -->
             <article class="card">
               <img
                 src="../img/thumb/thumb-function1.svg"
@@ -262,7 +267,6 @@
               </div>
             </article>
 
-            <!-- Function 2 -->
             <article class="card">
               <img
                 src="../img/thumb/thumb-function2.svg"
@@ -277,7 +281,6 @@
               </div>
             </article>
 
-            <!-- Function 3 -->
             <article class="card">
               <img
                 src="../img/thumb/thumb-function3.svg"
@@ -292,7 +295,6 @@
               </div>
             </article>
 
-            <!-- Function 4 -->
             <article class="card">
               <img
                 src="../img/thumb/thumb-function4.svg"
@@ -458,54 +460,42 @@ function oncePerSession(key, fn){
 
     <!-- Toggle JS & CSS exercise grids -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // JS exercises
-        const jsLink = document.getElementById("browseExercises");
-        const jsGrid = document.getElementById("js-exercises");
-        if (jsLink && jsGrid) {
-          function showJS() {
-            jsGrid.style.display = "grid";
-            jsGrid.classList.remove("is-hidden");
-            jsLink.textContent = "Hide Exercises ↑";
-            jsLink.setAttribute("aria-expanded", "true");
-            jsGrid.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-          function hideJS() {
-            jsGrid.style.display = "none";
-            jsGrid.classList.add("is-hidden");
-            jsLink.textContent = "Browse Exercises ↓";
-            jsLink.setAttribute("aria-expanded", "false");
-          }
-          hideJS();
-          jsLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            jsGrid.style.display === "none" ? showJS() : hideJS();
-          });
-        }
+      // one handler for any "toggle-grid" link
+      document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll(".toggle-grid[data-target]");
+        if (!links.length) return;
 
-        // CSS exercises
-        const cssLink = document.getElementById("browseCssExercises");
-        const cssGrid = document.getElementById("css-exercises");
-        if (cssLink && cssGrid) {
-          function showCSS() {
-            cssGrid.style.display = "grid";
-            cssGrid.classList.remove("is-hidden");
-            cssLink.textContent = "Hide Exercises ↑";
-            cssLink.setAttribute("aria-expanded", "true");
-            cssGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+        links.forEach((link) => {
+          const targetSel = link.getAttribute("data-target");
+          const grid = document.querySelector(targetSel);
+          if (!grid) return;
+
+          // start hidden
+          grid.style.display = "none";
+          link.setAttribute("aria-expanded", "false");
+          link.textContent = "Browse Exercises ↓";
+
+          function show() {
+            grid.style.display = "grid";
+            link.textContent = "Hide Exercises ↑";
+            link.setAttribute("aria-expanded", "true");
+            // optional: scroll into view
+            // grid.scrollIntoView({ behavior: "smooth", block: "start" });
           }
-          function hideCSS() {
-            cssGrid.style.display = "none";
-            cssGrid.classList.add("is-hidden");
-            cssLink.textContent = "Browse Exercises ↓";
-            cssLink.setAttribute("aria-expanded", "false");
+
+          function hide() {
+            grid.style.display = "none";
+            link.textContent = "Browse Exercises ↓";
+            link.setAttribute("aria-expanded", "false");
           }
-          hideCSS();
-          cssLink.addEventListener("click", (e) => {
+
+          link.addEventListener("click", (e) => {
             e.preventDefault();
-            cssGrid.style.display === "none" ? showCSS() : hideCSS();
+            grid.style.display === "none" || grid.style.display === ""
+              ? show()
+              : hide();
           });
-        }
+        });
       });
     </script>
   </body>

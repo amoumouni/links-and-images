@@ -274,6 +274,11 @@ ul {
   object-fit: contain;
 }
 
+#css-exercises .card img {
+  max-height: 160px;
+  object-fit: contain;
+}
+
 .rps-modal[aria-hidden="true"] { display: none; }
 .rps-modal { position: fixed; inset: 0; z-index: 9999; }
 .rps-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.6); backdrop-filter: blur(2px); }

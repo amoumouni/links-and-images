@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800.5 450.5">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Georgia-Bold, Georgia;
+        font-size: 28px;
+      }
+
+      .cls-1, .cls-2 {
+        opacity: .9;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #e8e9ec;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        font-family: Georgia, Georgia;
+        font-size: 54px;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #d4b45f;
+      }
+
+      .cls-3 {
+        font-size: 130px;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: Arial-BoldMT, Arial;
+      }
+
+      .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-7 {
+        stroke: #fff;
+      }
+
+      .cls-8 {
+        opacity: .14;
+      }
+
+      .cls-4 {
+        font-size: 40px;
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-10 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-6" x=".5" y=".5" width="800" height="450" rx="18" ry="18"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-7191" y1="7216" x2="-7190" y2="7215" gradientTransform="translate(5752800 3247200) scale(800 -450)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10192c"/>
+      <stop offset="1" stop-color="#0b1224"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-7191" y1="7999.44" x2="-7190" y2="7999.44" gradientTransform="translate(5752800 72081) scale(800 -9)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d4b45f" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#d4b45f" stop-opacity=".35"/>
+      <stop offset=".8" stop-color="#d4b45f" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#d4b45f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-10">
+    <g id="g36">
+      <rect id="rect7" class="cls-9" x=".5" y=".5" width="800" height="450"/>
+      <rect id="rect8" class="cls-5" x=".5" y="81.5" width="800" height="9"/>
+      <g id="g35" class="cls-8">
+        <line id="line8" class="cls-7" x1=".5" y1=".5" x2="800.5" y2=".5"/>
+        <line id="line9" class="cls-7" x1=".5" y1="37.5" x2="800.5" y2="37.5"/>
+        <line id="line10" class="cls-7" x1=".5" y1="74.5" x2="800.5" y2="74.5"/>
+        <line id="line11" class="cls-7" x1=".5" y1="111.5" x2="800.5" y2="111.5"/>
+        <line id="line12" class="cls-7" x1=".5" y1="148.5" x2="800.5" y2="148.5"/>
+        <line id="line13" class="cls-7" x1=".5" y1="185.5" x2="800.5" y2="185.5"/>
+        <line id="line14" class="cls-7" x1=".5" y1="222.5" x2="800.5" y2="222.5"/>
+        <line id="line15" class="cls-7" x1=".5" y1="259.5" x2="800.5" y2="259.5"/>
+        <line id="line16" class="cls-7" x1=".5" y1="296.5" x2="800.5" y2="296.5"/>
+        <line id="line17" class="cls-7" x1=".5" y1="333.5" x2="800.5" y2="333.5"/>
+        <line id="line18" class="cls-7" x1=".5" y1="370.5" x2="800.5" y2="370.5"/>
+        <line id="line19" class="cls-7" x1=".5" y1="407.5" x2="800.5" y2="407.5"/>
+        <line id="line20" class="cls-7" x1=".5" y1=".5" x2=".5" y2="450.5"/>
+        <line id="line21" class="cls-7" x1="50.5" y1=".5" x2="50.5" y2="450.5"/>
+        <line id="line22" class="cls-7" x1="100.5" y1=".5" x2="100.5" y2="450.5"/>
+        <line id="line23" class="cls-7" x1="150.5" y1=".5" x2="150.5" y2="450.5"/>
+        <line id="line24" class="cls-7" x1="200.5" y1=".5" x2="200.5" y2="450.5"/>
+        <line id="line25" class="cls-7" x1="250.5" y1=".5" x2="250.5" y2="450.5"/>
+        <line id="line26" class="cls-7" x1="300.5" y1=".5" x2="300.5" y2="450.5"/>
+        <line id="line27" class="cls-7" x1="350.5" y1=".5" x2="350.5" y2="450.5"/>
+        <line id="line28" class="cls-7" x1="400.5" y1=".5" x2="400.5" y2="450.5"/>
+        <line id="line29" class="cls-7" x1="450.5" y1=".5" x2="450.5" y2="450.5"/>
+        <line id="line30" class="cls-7" x1="500.5" y1=".5" x2="500.5" y2="450.5"/>
+        <line id="line31" class="cls-7" x1="550.5" y1=".5" x2="550.5" y2="450.5"/>
+        <line id="line32" class="cls-7" x1="600.5" y1=".5" x2="600.5" y2="450.5"/>
+        <line id="line33" class="cls-7" x1="650.5" y1=".5" x2="650.5" y2="450.5"/>
+        <line id="line34" class="cls-7" x1="700.5" y1=".5" x2="700.5" y2="450.5"/>
+        <line id="line35" class="cls-7" x1="750.5" y1=".5" x2="750.5" y2="450.5"/>
+      </g>
+    </g>
+  </g>
+  <text id="text36" class="cls-2" transform="translate(67.59 156.71)"><tspan x="0" y="0">{{</tspan></text>
+  <text id="text37" class="cls-2" transform="translate(606.16 386.08)"><tspan x="0" y="0">}}</tspan></text>
+  <text id="text38" class="cls-3" transform="translate(118.06 214.86)"><tspan x="0" y="0">CSS</tspan></text>
+  <text id="text39" class="cls-4" transform="translate(178.58 292.44)"><tspan x="0" y="0">Exercises</tspan></text>
+  <text id="text40" class="cls-1" transform="translate(168.07 337.37)"><tspan x="0" y="0">Selectors, Layout, Responsive</tspan><tspan x="103.76" y="33.6">Tweaks &amp; more</tspan></text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <rect width="200" height="120" fill="#0f1729" rx="12" />
+  <!-- Decorative quote marks -->
+  <text x="40" y="70" font-size="48" font-family="Georgia, serif" fill="#d4af37">“</text>
+  <text x="120" y="70" font-size="48" font-family="Georgia, serif" fill="#d4af37">”</text>
+  <!-- Label -->
+  <text x="100" y="105" font-size="14" font-family="Montserrat, sans-serif" fill="#fff" text-anchor="middle">
+    Quote Rotator
+  </text>
+</svg>

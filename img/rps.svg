@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <!-- Background -->
+  <rect width="200" height="120" rx="12" fill="#0f1729"/>
+
+  <!-- Symbols -->
+  <text x="50" y="65" text-anchor="middle"
+        font-family="Montserrat, Arial, sans-serif"
+        font-size="34" font-weight="700" fill="#111111">✊🏾</text>
+
+  <text x="100" y="65" text-anchor="middle"
+        font-family="Montserrat, Arial, sans-serif"
+        font-size="34" font-weight="700" fill="#111111">🖐🏾</text>
+
+  <text x="150" y="65" text-anchor="middle"
+        font-family="Montserrat, Arial, sans-serif"
+        font-size="34" font-weight="700" fill="#111111">✌🏾</text>
+
+  <!-- Label -->
+  <text x="100" y="105" text-anchor="middle"
+        font-family="Montserrat, Arial, sans-serif"
+        font-size="14" fill="#ffffff" font-weight="600">
+    Rock • Paper • Scissors
+  </text>
+</svg>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Recipe Project thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10192c"/>
+      <stop offset="100%" stop-color="#0b1224"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4b45f" stop-opacity="0.0"/>
+      <stop offset="20%" stop-color="#d4b45f" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#d4b45f" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#d4b45f" stop-opacity="0.0"/>
+    </linearGradient>
+    <clipPath id="rounded">
+      <rect x="0" y="0" width="800" height="450" rx="18" ry="18"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <g clip-path="url(#rounded)">
+    <rect width="800" height="450" fill="url(#bg)"/>
+    <rect x="0" y="81" width="800" height="9" fill="url(#shine)"/>
+    <!-- subtle gold utensils -->
+    <circle cx="700" cy="110" r="38" fill="none" stroke="#d4b45f" stroke-width="6" opacity="0.9"/>
+    <line x1="700" y1="72" x2="700" y2="148" stroke="#d4b45f" stroke-width="6" opacity="0.9"/>
+    <line x1="662" y1="110" x2="738" y2="110" stroke="#d4b45f" stroke-width="6" opacity="0.9"/>
+  </g>
+
+  <!-- Decorative brackets -->
+  <text x="72" y="148" font-family="Georgia, serif" font-size="54" fill="#d4b45f" opacity="0.9">{{</text>
+  <text x="680" y="400" font-family="Georgia, serif" font-size="54" fill="#d4b45f" opacity="0.9" text-anchor="end">}}</text>
+
+  <!-- Titles -->
+  <text x="72" y="260" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="90" fill="#e8e9ec">Recipe</text>
+  <text x="72" y="320" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="42" fill="#d4b45f">HTML/CSS Project</text>
+  <text x="72" y="370" font-family="Source Serif Pro, Georgia, serif" font-weight="600" font-size="28" fill="#e8e9ec" opacity="0.9">Semantic Structure • Styling</text>
+</svg>

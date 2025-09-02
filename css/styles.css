@@ -317,7 +317,7 @@ a:hover {
   line-height: 1.6;
 }
 .quote-card figcaption {
-  color: #ddd;
+  color: #ffd700;
 }
 
 /* =========================================
@@ -528,4 +528,12 @@ ul {
 
 .contact-list {
   list-style: none;
+}
+
+.featured-title {
+  color: #d4af37;
+}
+
+.contact-form {
+  color: #ffd700;
 }

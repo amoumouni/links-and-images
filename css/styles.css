@@ -26,6 +26,35 @@ body {
   min-height: 100%;
 }
 
+/* Background image as a fixed layer */
+.bg-fixed{
+  position: fixed;
+  inset: 0;           /* top:0; right:0; bottom:0; left:0 */
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;  /* fill without distortion */
+  z-index: -2;
+  pointer-events: none; /* don't block clicks */
+}
+
+/* Separate gradient overlay so text stays readable */
+body{
+  position: relative; /* create stacking context */
+  font-family: "Source Serif Pro", serif;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  background-color: #faf3e0; /* fallback behind everything */
+}
+
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(15,17,22,.3), rgba(15,17,22,.3));
+  z-index: -1;        /* sits above the image but below content */
+  pointer-events: none;
+}
+
 body {
   font-family: "Source Serif Pro", serif;
   line-height: 1.6;

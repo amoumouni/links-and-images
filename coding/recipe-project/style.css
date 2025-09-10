@@ -3,12 +3,12 @@ h1 {
   text-align: center;
   text-decoration: underline;
   font-family: fantasy;
-  color: chocolate
+  color: chocolate;
 }
 
 h2 {
   background-color: gold;
-  font-family:
+  font-family: ;
 }
 
 .title {
@@ -61,7 +61,7 @@ a {
 }
 
 #more-recipes {
-list-style: none;
+  list-style: none;
 }
 
 #Description {
@@ -69,5 +69,5 @@ list-style: none;
   color: crimson;
   padding: 10px;
   border: 10px double brown;
-  margin: 20px
+  margin: 20px;
 }

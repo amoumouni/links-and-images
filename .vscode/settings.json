@@ -1,6 +1,6 @@
 {
   "workbench.colorTheme": "Abyss",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": null,
   "editor.formatOnSave": true,
   "editor.fontSize": 16,
   "editor.tabSize": 5,

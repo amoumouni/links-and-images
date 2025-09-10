@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quote Rotator | Arianna “Ari” Kelley-Lomax</title>
+
+    <link rel="icon" href="../img/icons/akl-icon.svg" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Serif+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="container header-row">
+        <a class="brand" href="../index.html">
+          <span class="brand-name">Arianna "Ari" Kelley-Lomax</span>
+          <span class="brand-tag">| Writing • Editing • Communication</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li></li>
+            <li><a href="../about/about.html">About</a></li>
+            <li><a href="../resume/resume.html">Resume</a></li>
+            <li><a href="../projects/projects.html">Projects</a></li>
+            <li>
+              <a href="../coding/coding.html" aria-current="page">Coding</a>
+            </li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="panel section-box">
+            <h1>Quote Rotator Component</h1>
+            <p>
+              A tiny, dependency-free rotator that swaps quotes every 10 seconds
+              and uses an ARIA live region for accessibility.
+            </p>
+          </div>
+
+          <!-- Live Demo -->
+          <div class="panel section-box">
+            <h2>Live Demo</h2>
+            <p class="rps-caption">This area updates automatically.</p>
+            <div class="quote-card">
+              <blockquote id="qr-demo" class="footer-quote" aria-live="polite">
+                Loading quote…
+              </blockquote>
+            </div>
+            <button class="btn btn-outline" id="qr-next">Next quote now</button>
+          </div>
+
+          <!-- Source -->
+          <div class="panel section-box">
+            <h2>Source (drop-in)</h2>
+            <pre
+              style="overflow: auto"
+            ><code>&lt;span id="quote-rotator" aria-live="polite"&gt;&lt;/span&gt;
+&lt;script&gt;(function(){
+  const quotes = [
+    { text: "Words are, in my not-so-humble opinion, our most inexhaustible source of magic.", by: "J.K. Rowling" },
+    { text: "A writer should be joyous, an optimist … a believer in the perfectibility of man.", by: "John Cheever" }
+  ];
+  const el = document.getElementById('quote-rotator');
+  if (!el) return;
+  let i = 0;
+  function render(){ const q = quotes[i]; el.textContent = `“${q.text}” — ${q.by}`; i = (i+1) % quotes.length; }
+  render(); setInterval(render, 10000);
+})();&lt;/script&gt;</code></pre>
+            <p class="rps-caption">
+              This is the same pattern used in the site footer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <p>
+        <a href="../coding/coding.html" class="more"
+          >← Back to Coding Projects</a
+        >
+      </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-row">
+        <small>© 2025 Arianna "Ari" Kelley-Lomax. All rights reserved.</small
+        ><br />
+        <a href="../privacy/privacy.html">Privacy</a>
+      </div>
+    </footer>
+
+    <!-- Demo JS (page-local) -->
+    <script>
+      (function () {
+        const quotes = [
+          {
+            text: "Words are, in my not-so-humble opinion, our most inexhaustible source of magic.",
+            by: "J.K. Rowling",
+          },
+          {
+            text: "A writer should be joyous, an optimist … a believer in the perfectibility of man.",
+            by: "John Cheever",
+          },
+          {
+            text: "The first draft is just you telling yourself the story.",
+            by: "Terry Pratchett",
+          },
+        ];
+
+        const el = document.getElementById("qr-demo");
+        const nextBtn = document.getElementById("qr-next");
+        if (!el) return;
+
+        let i = 0;
+        function render() {
+          const q = quotes[i];
+          el.textContent = `“${q.text}” — ${q.by}`;
+          i = (i + 1) % quotes.length;
+        }
+        render();
+        const timer = setInterval(render, 10000);
+        nextBtn &&
+          nextBtn.addEventListener("click", () => {
+            render();
+          });
+        window.addEventListener("beforeunload", () => clearInterval(timer));
+      })();
+    </script>
+  </body>
+</html>

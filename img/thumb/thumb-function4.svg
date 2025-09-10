@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 597.66 360">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #f6c300;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #f6c300;
+        stroke-linecap: round;
+        stroke-width: 8px;
+      }
+
+      .cls-5 {
+        fill: #0f1729;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-6, .cls-2, .cls-3 {
+        font-weight: 700;
+        isolation: isolate;
+      }
+
+      .cls-6, .cls-3 {
+        font-family: TimesNewRomanPS-BoldMT, 'Times New Roman';
+        font-size: 96px;
+      }
+
+      .cls-2 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 26px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" x="0" y="0" width="597.66" height="360" rx="12" ry="12"/>
+  <line class="cls-4" x1="90" y1="190" x2="510" y2="190"/>
+  <g>
+    <text class="cls-6" transform="translate(158 150)"><tspan x="0" y="0">abc</tspan></text>
+    <text class="cls-3" transform="translate(257 150)"><tspan x="0" y="0">→</tspan></text>
+    <text class="cls-6" transform="translate(358.7 150)"><tspan x="0" y="0">c</tspan></text>
+  </g>
+  <polygon class="cls-1" points="380 194 372 212 388 212 380 194"/>
+  <text class="cls-2" transform="translate(159.88 240)"><tspan x="0" y="0">Function 4: Last Letter</tspan></text>
+</svg>

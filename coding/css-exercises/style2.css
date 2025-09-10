@@ -1,0 +1,21 @@
+.odd{
+  background-color: yellow;
+}
+
+#item2 {
+  color: blue;
+  font-size: 36px;
+}
+
+.is-24 {
+  font-size: 24px
+  }
+
+.item4 {
+  font-size: 24px;
+}
+
+#item4 {
+  background-color: red;
+  font-weight: bold;
+}

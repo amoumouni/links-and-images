@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function 2 — Multiply | Coding Demos</title>
+
+    <link rel="icon" href="../../img/icons/akl-icon.svg" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="container header-row">
+        <a class="brand" href="../../index.html">
+          <span class="brand-name">Arianna "Ari" Kelley-Lomax</span>
+          <span class="brand-tag">| Writing • Editing • Communication</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about/about.html">About</a></li>
+            <li><a href="../../resume/resume.html">Resume</a></li>
+            <li><a href="../../projects/projects.html">Projects</a></li>
+            <li>
+              <a href="../coding.html" aria-current="page">Coding</a>
+            </li>
+            <li><a href="../../contact/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container panel">
+        <h1>Function 2 — Multiply</h1>
+        <p>This function takes two numbers and returns their product.</p>
+
+        <!-- Input form -->
+        <form id="multiply-form">
+          <label>
+            <span>First Number:</span><br />
+            <input type="number" id="num1" required />
+          </label>
+          <br /><br />
+          <label>
+            <span>Second Number:</span><br />
+            <input type="number" id="num2" required />
+          </label>
+          <br /><br />
+          <button type="submit" class="btn">Multiply</button>
+        </form>
+
+        <!-- Output -->
+        <div id="output" style="margin-top: 1rem; font-weight: 600"></div>
+
+        <!-- Back link -->
+        <p style="margin-top: 2rem">
+          <a class="more" href="../coding.html">← Back to Coding Projects</a>
+        </p>
+      </div>
+    </main>
+
+    <script>
+      // Function 2: Multiply
+      function multiply(a, b) {
+        return a * b;
+      }
+
+      // Hook up the form
+      document
+        .getElementById("multiply-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const n1 = parseFloat(document.getElementById("num1").value);
+          const n2 = parseFloat(document.getElementById("num2").value);
+          const result = multiply(n1, n2);
+          document.getElementById(
+            "output"
+          ).textContent = `${n1} × ${n2} = ${result}`;
+        });
+    </script>
+  </body>
+</html>

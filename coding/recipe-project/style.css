@@ -1,0 +1,73 @@
+h1 {
+  background-color: orange;
+  text-align: center;
+  text-decoration: underline;
+  font-family: fantasy;
+  color: chocolate
+}
+
+h2 {
+  background-color: gold;
+  font-family:
+}
+
+.title {
+  color: chocolate;
+}
+
+.subtitle {
+  color: crimson;
+}
+
+body {
+  background-color: wheat;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+ol {
+  list-style-type: upper-roman;
+  background-color: tan;
+  margin-bottom: 15px;
+  padding: 20px;
+  list-style-position: inside;
+}
+
+img {
+  border: 20px dotted orange;
+  margin: 10px;
+  padding: 10px;
+}
+
+.ingredients {
+  background-color: orange;
+  color: khaki;
+}
+
+.ingredients-section {
+  color: brown;
+  background-color: khaki;
+  padding: 10px;
+}
+
+a {
+  color: red;
+  text-decoration-line: none;
+}
+
+#more-recipes {
+list-style: none;
+}
+
+#Description {
+  background-color: tan;
+  color: crimson;
+  padding: 10px;
+  border: 10px double brown;
+  margin: 20px
+}

@@ -34,11 +34,7 @@ body {
   object-fit: cover; /* fill, no distortion */
   z-index: -2;
   pointer-events: none;
-}
-
-.section,
-.page-hero {
-  background: transparent !important;
+  transform: translateZ(0); /* nudge GPU; can improve sharpness */
 }
 
 body {
@@ -550,4 +546,15 @@ ul {
 
 .contact-form {
   color: #ffd700;
+}
+
+/* === Global SVG background applied via CSS only === */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../img/writer-background.svg") no-repeat center center;
+  background-size: cover;
+  z-index: -2; /* sits behind everything */
+  pointer-events: none; /* don’t block clicks */
 }

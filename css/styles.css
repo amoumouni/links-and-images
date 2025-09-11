@@ -34,7 +34,11 @@ body {
   object-fit: cover; /* fill, no distortion */
   z-index: -2;
   pointer-events: none;
-  transform: translateZ(0); /* nudge GPU; can improve sharpness */
+}
+
+.section,
+.page-hero {
+  background: transparent !important;
 }
 
 body {

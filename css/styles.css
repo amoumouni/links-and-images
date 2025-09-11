@@ -26,37 +26,31 @@ body {
   min-height: 100%;
 }
 
-.bg-fixed{
+.bg-fixed {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;         /* fill, no distortion */
+  object-fit: cover; /* fill, no distortion */
   z-index: -2;
   pointer-events: none;
-  transform: translateZ(0);  /* nudge GPU; can improve sharpness */
+  transform: translateZ(0); /* nudge GPU; can improve sharpness */
 }
 
-body{
+body {
   position: relative;
   font-family: "Source Serif Pro", serif;
   line-height: 1.6;
   color: var(--color-text-light);
   background-color: #faf3e0; /* fallback behind everything */
 }
-body::after{
+body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: linear-gradient(rgba(15,17,22,.3), rgba(15,17,22,.3));
-  z-index: -1;               /* overlay above image, below content */
+  background: linear-gradient(rgba(15, 17, 22, 0.3), rgba(15, 17, 22, 0.3));
+  z-index: -1; /* overlay above image, below content */
   pointer-events: none;
-}
-
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
 }
 
 img {

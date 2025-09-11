@@ -558,3 +558,9 @@ body::before {
   z-index: -2; /* sits behind everything */
   pointer-events: none; /* don’t block clicks */
 }
+
+/* Force hero sections transparent so global background shows */
+.page-hero,
+.page-hero::before {
+  background: transparent !important;
+}
